@@ -1,0 +1,88 @@
+/* Typography */
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*************
+** Base CSS **
+*************/
+
+body {
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    max-width: 1440px;
+}
+
+
+/***********
+** Header **
+***********/
+.header__logo{
+    padding:0 2rem;
+}
+
+.header__logo > a {
+    height: 2rem;
+    width: auto;
+}
+
+.header__blank {
+    flex-grow: 1;
+}
+
+.header__sign-up {
+    font-weight: 700;
+    padding: 3rem 2rem;
+    color: #0065FC;
+}
+
+.navbar > ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 3rem 0;
+    margin:0;
+}
+
+.navbar__link {
+    padding: 3rem 2rem;
+    position: relative;
+}
+
+.navbar__link:hover {
+    cursor: pointer;
+    color: #0065FC;
+}
+
+.navbar__link::after {
+    content:"";
+    background: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-top: 2px solid #0065FC;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 200ms;
+}
+
+.navbar__link:hover::after {
+    transform: scaleX(100%);
+}
