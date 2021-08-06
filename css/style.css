@@ -22,18 +22,20 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100vw;
     max-width: 1440px;
+    padding:0 2rem;
+    box-sizing: border-box;
 }
 
 
 /***********
 ** Header **
 ***********/
-.header__logo{
-    padding:0 2rem;
+.header{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__logo > a {
@@ -47,7 +49,7 @@ body {
 
 .header__sign-up {
     font-weight: 700;
-    padding: 3rem 2rem;
+    padding: 3rem 0 3rem 2rem;
     color: #0065FC;
 }
 
@@ -84,5 +86,13 @@ body {
 }
 
 .navbar__link:hover::after {
-    transform: scaleX(100%);
+    transform: scaleX(1);
+}
+
+
+/*********
+** Main **
+*********/
+.main{
+    flex-direction: column;
 }
