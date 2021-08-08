@@ -2,6 +2,8 @@
 * {
     font-family: 'Raleway', sans-serif;
     outline: none;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -14,7 +16,6 @@ a {
 ** Base CSS **
 *************/
 body {
-    margin:0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,14 +29,63 @@ body {
     box-sizing: border-box;
 }
 
+.row {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Cartes */
+.card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px #D9D9D9;
+    transform: scale(1);
+    transition: .2s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card__content {
+    margin: .5rem .7rem .3rem;
+    line-height: 1.5rem;
+}
+
+.card__rating {
+    color: #0065FC;
+}
+
+.card__rating--4 > li:nth-child(5) {
+    color: #D9D9D9;
+}
+
+.card__rating--3 > li:nth-child(5), .card__rating--3 > li:nth-child(4) {
+    color:#D9D9D9;
+}
+
 
 /***********
 ** Header **
 ***********/
 .header{
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 }
 
 .header__logo > a {
@@ -54,11 +104,8 @@ body {
 }
 
 .navbar > ul {
-    display: flex;
-    flex-direction: row;
     list-style-type: none;
     padding: 3rem 0;
-    margin:0;
 }
 
 .navbar__link {
@@ -93,18 +140,10 @@ body {
 /*********
 ** Main **
 *********/
-.main{
-    flex-direction: column;
-}
-
 .title {
     font-size: 1.5rem;
     margin: 0 0 .5rem;
     font-weight: 700;
-}
-
-.subtitle {
-    margin: 0;
 }
 
 
@@ -112,8 +151,6 @@ body {
 ** Barre de recherche **
 ***********************/
 .searchbar {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     height: 3rem;
     width: 28rem;
@@ -178,8 +215,7 @@ body {
 ** Filtres **
 ************/
 .filter-list {
-    display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     margin: 1rem 0;
     font-size: 1.1rem;
@@ -193,7 +229,6 @@ body {
     height: 3rem;
     box-sizing: border-box;
     margin: 0 1rem;
-    padding: 0;
     border: 2px solid #D9D9D9;
     border-radius: 1.5rem;
     background: none;
@@ -249,4 +284,48 @@ body {
     border-radius: 50%;
     font-size: .8rem;
     color:#0065FC;
+}
+
+
+/*****************
+** Hébergements **
+*****************/
+.places {
+    margin-top: 2.5rem;
+    gap: 2.5rem;
+}
+
+.places__wrapper {
+    border-radius: 1rem;
+    background-color: #F2F2F2;
+    padding: 2.5rem;
+}
+
+.places__main {
+    width: 75%;
+}
+
+.places__aside {
+    width: 25%;
+}
+
+.places__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.places__list {
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.hotel {
+    border: 5px solid white;
+    flex-basis: 15rem;
+    flex-grow: 1;
+}
+
+.hotel .card__img {
+    height: 7rem;
 }

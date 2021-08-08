@@ -10,13 +10,13 @@
     <title>Reservia - Pour des vacances de rêve</title>
 </head>
 <body>
-    <header class="container header">
+    <header class="container row header">
         <a href="#" class="header__logo">
             <img src="media/Reservia.svg" alt="Logo Reservia">
         </a>
         <div class="header__blank"></div>
         <nav class="navbar">
-            <ul>
+            <ul class="row">
                 <li>
                     <a class="navbar__link navbar__link--active">Hébergements</a>
                 </li>
@@ -27,10 +27,10 @@
         </nav>
         <a href="#" class="header__sign-up">S'inscrire</a>
     </header>
-    <main class="container main">
+    <main class="container col main">
         <h1 class="title">Trouvez votre hébergement pour des vacances de rêve</h1>
         <p class="subtitle">En plein centre-ville ou en pleine nature</p>
-        <form class="searchbar">
+        <form class="row searchbar">
             <div class="searchbar__icon">
                 <i class="fas fa-map-marker-alt"></i>
             </div>
@@ -40,7 +40,7 @@
             </button>
             <input type="submit" value="Rechercher" class="searchbar__submit">
         </form>
-        <div class="filter-list">
+        <div class="row filter-list">
             <label class="filters__title">Filtres</label>
             <button class="filter">
                 <span class="filter__icon">
@@ -73,26 +73,98 @@
             </div>
             <p class="info__text">Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
-        <div class="places">
-            <section>
-                <h2>Hébergements à Marseille</h2>
-                <div class="hotel-list">
-                    <a href="#" class="hotel">
-                        <img src="media/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Photo de la chambre" class="hotel__image">
-                        <h3 class="hotel__name">Auberge la Cannebière</h3>
-                        <p>Nuit à partir de <strong>25€</strong></p>
-                        <div class="hotel__rating hotel__rating--5">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+        <div class="row places">
+            <section class="places__main places__wrapper">
+                <h2 class="places__title">Hébergements à Marseille</h2>
+                <div class="row places__list">
+                    <a href="#" class="card hotel">
+                        <img src="media/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Photo de la chambre" class="card__img">
+                        <div class="card__content">
+                            <h3 class="card__title">Auberge la Cannebière</h3>
+                            <p class="card__price">Nuit à partir de <strong>25€</strong></p>
+                            <ul class="row card__rating">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="#" class="card hotel">
+                        <img src="media/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Photo de la chambre" class="card__img">
+                        <div class="card__content">
+                            <h3 class="card__title">Hôtel du port</h3>
+                            <p class="card__price">Nuit à partir de <strong>52€</strong></p>
+                            <ul class="row card__rating">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="#" class="card hotel">
+                        <img src="media/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Photo de la chambre" class="card__img">
+                        <div class="card__content">
+                            <h3 class="card__title">Hôtel Les mouettes</h3>
+                            <p class="card__price">Nuit à partir de <strong>76€</strong></p>
+                            <ul class="row card__rating card__rating--4">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="#" class="card hotel">
+                        <img src="media/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Photo de la chambre" class="card__img">
+                        <div class="card__content">
+                            <h3 class="card__title">Hôtel de la mer</h3>
+                            <p class="card__price">Nuit à partir de <strong>46€</strong></p>
+                            <ul class="row card__rating card__rating--3">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="#" class="card hotel">
+                        <img src="media/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Photo de la chambre" class="card__img">
+                        <div class="card__content">
+                            <h3 class="card__title">Auberge Le panier</h3>
+                            <p class="card__price">Nuit à partir de <strong>23€</strong></p>
+                            <ul class="row card__rating card__rating--4">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="#" class="card hotel">
+                        <img src="media/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Photo de la chambre" class="card__img">
+                        <div class="card__content">
+                            <h3 class="card__title">Hôtel Chez Amina</h3>
+                            <p class="card__price">Nuit à partir de <strong>96€</strong></p>
+                            <ul class="row card__rating">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
                         </div>
                     </a>
                 </div>
                 <p>Afficher plus</p>
             </section>
-            <aside>
+            <aside class="places__aside places__wrapper">
                 <h2>Les plus populaires</h2>
             </aside>
         </div>
