@@ -1,6 +1,7 @@
 /* Typography */
 * {
     font-family: 'Raleway', sans-serif;
+    outline: none;
 }
 
 a {
@@ -116,6 +117,7 @@ body {
     justify-content: space-between;
     height: 3rem;
     width: 28rem;
+    box-sizing: border-box;
     border: 1px solid #F2F2F2;
     border-radius: 1rem;
     margin: 1rem 0;
@@ -129,6 +131,7 @@ body {
     height: 100%;
     flex-basis: 3rem;
     background-color: #F2F2F2;
+    font-size: 1.1rem;
 }
 
 .searchbar__input {
@@ -154,4 +157,54 @@ body {
 
 .searchbar__submit:hover{
     cursor: pointer;
+}
+
+/************
+** Filtres **
+************/
+.filters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 3rem;
+    box-sizing: border-box;
+    margin: 0 1rem;
+    padding: 0;
+    border: 2px solid #D9D9D9;
+    border-radius: 1.5rem;
+    background: none;
+}
+
+.filter__icon {
+    position: relative;
+    left: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    background-color: #DEEBFF;
+    color: #0065FC;
+    font-size: 1.2rem;
+}
+
+.filter__icon > .fas {
+    border: 1px solid red;
+    background-color: red;
+}
+
+.filter__name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 1rem;
 }
