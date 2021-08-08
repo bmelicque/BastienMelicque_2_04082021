@@ -145,6 +145,21 @@ body {
     font-weight: 700;
 }
 
+.searchbar__reset {
+    height: 100%;
+    padding: 0 1rem;
+    border:none;
+    outline:none;
+    background: none;
+    font-size: 1.1rem;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.searchbar:hover > .searchbar__reset{
+    visibility: visible;
+}
+
 .searchbar__submit {
     height: 100%;
     background-color: #0065FC;
