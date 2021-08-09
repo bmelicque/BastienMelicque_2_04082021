@@ -10,6 +10,7 @@
     <title>Reservia - Pour des vacances de rêve</title>
 </head>
 <body>
+    <!-- Header -->
     <header class="container row header">
         <a href="#" class="header__logo">
             <img src="media/Reservia.svg" alt="Logo Reservia">
@@ -18,64 +19,72 @@
         <nav class="navbar">
             <ul class="row">
                 <li>
-                    <a class="navbar__link navbar__link--active">Hébergements</a>
+                    <a href="#Hebergements" class="navbar__link navbar__link--active">Hébergements</a>
                 </li>
                 <li>
-                    <a class="navbar__link">Activités</a>
+                    <a href="#Activites" class="navbar__link">Activités</a>
                 </li>
             </ul>
         </nav>
         <a href="#" class="header__sign-up">S'inscrire</a>
     </header>
+
+    <!-- Main -->
     <main class="container col main">
         <h1 class="title">Trouvez votre hébergement pour des vacances de rêve</h1>
         <p class="subtitle">En plein centre-ville ou en pleine nature</p>
-        <form class="row searchbar">
-            <div class="searchbar__icon">
-                <i class="fas fa-map-marker-alt"></i>
+        <!-- Formulaire -->
+        <form action="index.php" method="post">
+            <div class="row searchbar">
+                <label class="searchbar__icon" name="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                </label>
+                <input type="text" placeholder="Marseille, France" class="searchbar__input">
+                <button type="reset" class="searchbar__reset">
+                    <i class="fas fa-times"></i>
+                </button>
+                <input type="submit" value="Rechercher" class="searchbar__submit">
             </div>
-            <input type="text" placeholder="Marseille, France" class="searchbar__input">
-            <button type="reset" class="searchbar__reset">
-                <i class="fas fa-times"></i>
-            </button>
-            <input type="submit" value="Rechercher" class="searchbar__submit">
+            <div class="row filter-list">
+                <label class="filters__title">Filtres</label>
+                <button class="filter">
+                    <span class="filter__icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </span>
+                    <span class="filter__name">Économique</span>
+                </button>
+                <button class="filter">
+                    <span class="filter__icon">
+                        <i class="fas fa-child"></i>
+                    </span>
+                    <span class="filter__name">Familial</span>
+                </button>
+                <button class="filter">
+                    <span class="filter__icon">
+                        <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="filter__name">Romantique</span>
+                </button>
+                <button class="filter">
+                    <span class="filter__icon">
+                        <i class="fas fa-dog"></i>
+                    </span>
+                    <span class="filter__name">Animaux autorisés</span>
+                </button>
+            </div>
         </form>
-        <div class="row filter-list">
-            <label class="filters__title">Filtres</label>
-            <button class="filter">
-                <span class="filter__icon">
-                    <i class="fas fa-money-bill-wave"></i>
-                </span>
-                <span class="filter__name">Économique</span>
-            </button>
-            <button class="filter">
-                <span class="filter__icon">
-                    <i class="fas fa-child"></i>
-                </span>
-                <span class="filter__name">Familial</span>
-            </button>
-            <button class="filter">
-                <span class="filter__icon">
-                    <i class="fas fa-heart"></i>
-                </span>
-                <span class="filter__name">Romantique</span>
-            </button>
-            <button class="filter">
-                <span class="filter__icon">
-                    <i class="fas fa-dog"></i>
-                </span>
-                <span class="filter__name">Animaux autorisés</span>
-            </button>
-        </div>
+
         <div class="info">
             <div class="info__icon">
                 <i class="fas fa-info"></i>
             </div>
             <p class="info__text">Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
+
         <div class="row places">
+            <!-- Hébergements -->
             <section class="places__main places__wrapper">
-                <h2 class="places__title">Hébergements à Marseille</h2>
+                <h2 class="places__title" id="Hebergements">Hébergements à Marseille</h2>
                 <div class="row places__list">
                     <a href="#" class="card hotel">
                         <img src="media/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Photo de la chambre" class="card__img">
@@ -164,10 +173,15 @@
                 </div>
                 <p>Afficher plus</p>
             </section>
+
+            <!-- Populaires -->
             <aside class="places__aside places__wrapper">
                 <h2>Les plus populaires</h2>
             </aside>
         </div>
+        <section class="activities">
+            <h2 class="activities__title" id="Activites">Activités à Marseille</h2>
+        </section>
     </main>
 </body>
 </html>

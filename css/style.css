@@ -1,4 +1,6 @@
-/* Typography */
+/***************
+** Typography **
+***************/
 * {
     font-family: 'Raleway', sans-serif;
     outline: none;
@@ -15,6 +17,10 @@ a {
 /*************
 ** Base CSS **
 *************/
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
