@@ -70,8 +70,12 @@ ul {
 }
 
 .card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: .5rem .7rem .3rem;
     line-height: 1.5rem;
+    font-size: .9em;
 }
 
 .card__rating {
@@ -299,6 +303,7 @@ ul {
 .places {
     margin-top: 2.5rem;
     gap: 2.5rem;
+    align-items: stretch;
 }
 
 .places__wrapper {
@@ -308,11 +313,11 @@ ul {
 }
 
 .places__main {
-    width: 75%;
+    width: 70%;
 }
 
 .places__aside {
-    width: 25%;
+    width: 30%;
 }
 
 .places__title {
@@ -322,6 +327,7 @@ ul {
 
 .places__list {
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 2rem;
     margin: 1rem 0;
 }
@@ -334,4 +340,41 @@ ul {
 
 .hotel .card__img {
     height: 7rem;
+}
+
+.places__display-more {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.popular__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular__icon {
+    font-size: 1.5rem;
+}
+
+.popular__list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.popular {
+    display: flex;
+    flex-direction: row;
+    border: 5px solid white;
+    width: 21rem;
+    flex-basis: 8rem;
+    flex-grow: 1;
+}
+
+.popular .card__img {
+    height: 100%;
+    width: 8rem;
 }

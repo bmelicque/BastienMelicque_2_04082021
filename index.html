@@ -36,7 +36,7 @@
         <!-- Formulaire -->
         <form action="index.php" method="post">
             <div class="row searchbar">
-                <label class="searchbar__icon" name="location">
+                <label class="searchbar__icon">
                     <i class="fas fa-map-marker-alt"></i>
                 </label>
                 <input type="text" placeholder="Marseille, France" class="searchbar__input">
@@ -171,12 +171,67 @@
                         </div>
                     </a>
                 </div>
-                <p>Afficher plus</p>
+                <p class="places__display-more">Afficher plus</p>
             </section>
 
             <!-- Populaires -->
-            <aside class="places__aside places__wrapper">
-                <h2>Les plus populaires</h2>
+            <aside class="places__aside places__wrapper col">
+                <div class="popular__title">
+                    <h2>Les plus populaires</h2>
+                    <div class="popular__icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+                <div class="places__list popular__list">
+                    <a href="#" class="card popular">
+                        <img src="media/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo de la chambre" class="card__img">
+                        <div class="card__content">
+                            <div class="card__description">
+                                <h3 class="card__title">Hôtel Le Soleil du matin</h3>
+                                <p class="card__price">Nuit à partir de <strong>128€</strong></p>
+                            </div>
+                            <ul class="row card__rating">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="#" class="card popular">
+                        <img src="media/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Photo de la chambre" class="card__img">
+                        <div class="card__content">
+                            <div class="card__description">
+                                <h3 class="card__title">Au cœur de l'eau Chambre d'hôtes</h3>
+                                <p class="card__price">Nuit à partir de <strong>71€</strong></p>
+                            </div>
+                            <ul class="row card__rating card__rating--4">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="#" class="card popular">
+                        <img src="media/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Photo de la chambre" class="card__img">
+                        <div class="card__content">
+                            <div class="card__description">
+                                <h3 class="card__title">Hôtel Tout bleu et blanc</h3>
+                                <p class="card__price">Nuit à partir de <strong>68€</strong></p>
+                            </div>
+                            <ul class="row card__rating card__rating--4">
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
             </aside>
         </div>
         <section class="activities">
