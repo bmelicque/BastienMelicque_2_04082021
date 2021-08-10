@@ -35,7 +35,7 @@ body {
     display: flex;
     width: 100vw;
     max-width: 1440px;
-    padding:0 2rem;
+    padding:0 3rem;
     box-sizing: border-box;
 }
 
@@ -229,7 +229,7 @@ ul {
 .filter-list {
     flex-wrap: wrap;
     align-items: center;
-    margin: 1rem 0;
+    margin: 2rem 0;
     font-size: 1.1rem;
     font-weight: 700;
 }
@@ -414,4 +414,35 @@ ul {
 .activities__col .card__content {
     flex: 0 0 auto;
     margin: 1rem;
+}
+
+/***********
+** Footer **
+***********/
+.footer {
+    position: relative;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.footer:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    background-color: #F2F2F2;
+    transform: translateX(-50%);
+}
+
+.footer__section {
+    flex-grow: 1;
+    line-height: 2rem;
+}
+
+.footer__title {
+    font-size: 1rem;
+    margin-bottom: .5rem;
 }
