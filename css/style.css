@@ -228,7 +228,7 @@ ul {
 .searchbar {
     justify-content: start;
     height: 3rem;
-    width: 28rem;
+    max-width: 28rem;
     box-sizing: border-box;
     border: 1px solid #F2F2F2;
     border-radius: 1rem;
@@ -256,18 +256,22 @@ ul {
 }
 
 .searchbar__reset {
+    justify-content: center;
+    align-items: center;
+    background: transparent;
     height: 100%;
     padding: 0 1rem;
     font-size: 1.1rem;
-    visibility: hidden;
+    display: none;
     cursor: pointer;
 }
 
 .searchbar:hover > .searchbar__reset{
-    visibility: visible;
+    display: flex;
 }
 
 .searchbar__submit {
+    position: relative;
     flex: 0 0;
     height: 100%;
     background-color: #0065FC;
@@ -281,6 +285,22 @@ ul {
     cursor: pointer;
 }
 
+@media screen and (max-width: 576px){
+    .searchbar__submit{
+        border-radius: 1rem;
+    }
+
+    .searchbar__submit span {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 577px){
+    .searchbar__submit div {
+        display: none;
+    }
+}
+
 /************
 ** Filtres **
 ************/
@@ -288,8 +308,15 @@ ul {
     flex-wrap: wrap;
     align-items: center;
     margin: 2rem 0;
+    gap: 1rem 2rem;
     font-size: 1.1rem;
     font-weight: 700;
+}
+
+@media screen and (max-width: 767px) {
+    .filter-list__title {
+        width: 100vw;
+    }
 }
 
 .filter {
@@ -298,7 +325,6 @@ ul {
     align-items: center;
     height: 3rem;
     box-sizing: border-box;
-    margin: 0 1rem;
     border: 2px solid #D9D9D9;
     border-radius: 1.5rem;
     transform: scale(1);
