@@ -106,6 +106,7 @@ ul {
 ***********/
 .header{
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .header__logo > a {
@@ -123,6 +124,15 @@ ul {
     color: #0065FC;
 }
 
+@media screen and (max-width: 767px){
+    .header__sign-up {
+        padding: 1.5rem 0;
+    }
+}
+
+/***************
+** Navigation **
+***************/
 .navbar > ul {
     list-style-type: none;
     padding: 3rem 0;
@@ -153,6 +163,52 @@ ul {
 
 .navbar__link:hover::after {
     transform: scaleX(1);
+}
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        order: 4;
+        flex-basis: 100vw;
+        position: relative;
+        margin: 0 -3rem 2rem;
+    }
+
+    .navbar::after {
+        content: '';
+        position: absolute;
+        bottom:0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        border-bottom: 2px solid #F2F2F2;
+    }
+
+    .navbar > ul {
+        padding: 0;
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar li {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    .navbar__link {
+        padding: 1rem;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .navbar__link::after {
+        z-index: 1;
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+    }
 }
 
 
