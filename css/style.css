@@ -128,7 +128,7 @@ ul {
         position: relative;
         margin: 0 -3rem 2rem;
     }
-
+    
     .navbar::after {
         content: '';
         position: absolute;
@@ -138,26 +138,26 @@ ul {
         width: 100vw;
         border-bottom: 2px solid #F2F2F2;
     }
-
+    
     .navbar > ul {
         padding: 0;
         flex-grow: 1;
         display: flex;
         justify-content: space-between;
     }
-
+    
     .navbar li {
         display: flex;
         justify-content: center;
         flex-grow: 1;
     }
-
+    
     .navbar__link {
         padding: 1rem;
         flex-grow: 1;
         text-align: center;
     }
-
+    
     .navbar__link::after {
         z-index: 1;
         border-top: none;
@@ -244,7 +244,7 @@ ul {
     .searchbar__submit{
         border-radius: 1rem;
     }
-
+    
     .searchbar__submit span {
         display: none;
     }
@@ -407,7 +407,7 @@ ul {
         flex: 1 15rem;
         flex-direction: column;
     }
-
+    
     .card--popular .card__img {
         max-width: none;
     }
@@ -418,11 +418,11 @@ ul {
     .card--popular {
         flex-direction: row;
     }
-
+    
     .card--popular .card__img {
         max-width: 35%;
     }
-
+    
     .card--hotel .card__img {
         height: 7rem;
     }
@@ -530,7 +530,7 @@ ul {
     .section__list {
         flex-direction: row;
     }
-
+    
     .activities__col {
         flex: 1 0 14rem;
     }
@@ -542,7 +542,7 @@ ul {
         flex: 1 0 25%;
         height: 14rem;
     }
-
+    
     .activities__col:nth-child(2n) {
         flex: 1 0 60%;
     }
@@ -554,7 +554,7 @@ ul {
         flex: 1 0 20%;
         height: 28rem;
     }
-
+    
     .activities__col:nth-child(2n) {
         flex: 1 0 20%;
     }
@@ -571,15 +571,15 @@ ul {
     .housing-wrapper {
         flex-direction: row;
     }
-
+    
     .accomodations__main {
         width: 60%;
     }
-
+    
     .section--popular {
         width: 25%;
     }
-
+    
     .section--popular::before {
         display: none;
     }
@@ -589,6 +589,7 @@ ul {
 ** Footer **
 ***********/
 .footer {
+    display: flex;
     position: relative;
     justify-content: space-between;
     padding: 3rem;
@@ -614,4 +615,13 @@ ul {
 .footer__title {
     font-size: 1rem;
     margin-bottom: .5rem;
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+    }
 }
