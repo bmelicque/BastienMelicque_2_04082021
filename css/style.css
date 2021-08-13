@@ -432,6 +432,13 @@ ul {
 /*************
 ** Sections **
 *************/
+.housing-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2.5rem;
+    align-items: stretch;
+}
+
 .section {
     margin: 2rem 0;
 }
@@ -458,10 +465,6 @@ ul {
     margin: 1rem 0;
 }
 
-.section--popular .section__list {
-    flex-direction: row;
-}
-
 .section__display-more {
     margin-top: 2rem;
     font-size: 1.1rem;
@@ -469,15 +472,7 @@ ul {
     cursor: pointer;
 }
 
-.housing-wrapper {
-    flex-direction: column-reverse;
-    gap: 2.5rem;
-    align-items: stretch;
-}
-
-/************************
-** Les plus populaires **
-************************/
+/* Les plus populaires */
 .section--popular {
     position: relative;
     padding: 3rem 0;
@@ -495,6 +490,10 @@ ul {
     background: #F2F2F2;
 }
 
+.section--popular .section__list {
+    flex-direction: row;
+}
+
 .section__icon--popular {
     font-size: 1.5rem;
 }
@@ -502,13 +501,10 @@ ul {
 /**************
 ** Activités **
 **************/
-.activities__list {
-    align-items: stretch;
-}
-
 .activities__col {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 28rem;
     flex: 1 0 20%;
     gap: 2rem;
@@ -516,10 +512,7 @@ ul {
 
 .activities__col .card {
     min-height: 10rem;
-}
-
-.activities__col:nth-child(2n+1) .card {
-    flex: 1;
+    flex: 1 0 12rem;
 }
 
 .activities__col .card__img {
@@ -537,6 +530,34 @@ ul {
     .section__list {
         flex-direction: row;
     }
+
+    .activities__col {
+        flex: 1 0 14rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .activities__col {
+        flex-direction: row;
+        flex: 1 0 25%;
+        height: 14rem;
+    }
+
+    .activities__col:nth-child(2n) {
+        flex: 1 0 60%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .activities__col {
+        flex-direction: column;
+        flex: 1 0 20%;
+        height: 28rem;
+    }
+
+    .activities__col:nth-child(2n) {
+        flex: 1 0 20%;
+    }
 }
 
 /* Desktop */
@@ -552,11 +573,11 @@ ul {
     }
 
     .accomodations__main {
-        width: 70%;
+        width: 60%;
     }
 
     .section--popular {
-        width: 30%;
+        width: 25%;
     }
 
     .section--popular::before {
