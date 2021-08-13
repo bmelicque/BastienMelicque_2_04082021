@@ -29,6 +29,7 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    width: 100vw;
 }
 
 .container {
@@ -233,10 +234,31 @@ ul {
     color: white;
     font-size: 1.1rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
-.searchbar__submit:hover{
-    cursor: pointer;
+.searchbar__submit::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .1);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.searchbar__submit:hover::after {
+    animation: .2s fill-in both;
+}
+
+@keyframes fill-in {
+    to {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
 }
 
 /* Mobile */
@@ -245,14 +267,14 @@ ul {
         border-radius: 1rem;
     }
     
-    .searchbar__submit span {
+    .searchbar__submit--text {
         display: none;
     }
 }
 
 /* Tablette et + */
 @media screen and (min-width: 576px){
-    .searchbar__submit div {
+    .searchbar__submit--icon {
         display: none;
     }
 }
@@ -498,29 +520,25 @@ ul {
     font-size: 1.5rem;
 }
 
-/**************
-** Activités **
-**************/
-.activities__col {
+/* Colonnes pour la section "Activités" */
+.section__sub-col {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 28rem;
-    flex: 1 0 20%;
     gap: 2rem;
 }
 
-.activities__col .card {
+.section__sub-col .card {
     min-height: 10rem;
     flex: 1 0 12rem;
 }
 
-.activities__col .card__img {
+.section__sub-col .card__img {
     flex: 1 1 50%;
     height: 0;
 }
 
-.activities__col .card__content {
+.section__sub-col .card__content {
     flex: 0 0 auto;
     margin: 1rem;
 }
@@ -531,32 +549,41 @@ ul {
         flex-direction: row;
     }
     
-    .activities__col {
+    .section__sub-col {
         flex: 1 0 14rem;
+        height: 28rem;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .activities__col {
+    .section__sub-col {
         flex-direction: row;
         flex: 1 0 25%;
         height: 14rem;
     }
     
-    .activities__col:nth-child(2n) {
+    .section__sub-col:nth-child(2n) {
         flex: 1 0 60%;
     }
 }
 
 @media screen and (min-width: 992px) {
-    .activities__col {
+    .section__sub-col {
         flex-direction: column;
         flex: 1 0 20%;
         height: 28rem;
     }
     
-    .activities__col:nth-child(2n) {
+    .section__sub-col:nth-child(2n) {
         flex: 1 0 20%;
+    }
+    
+    .section__sub-col:nth-child(2) .card:nth-child(1) {
+        flex: 1 0 14rem;
+    }
+    
+    .section__sub-col:nth-child(4) .card:nth-child(2) {
+        flex: 1 0 14rem;
     }
 }
 
@@ -572,7 +599,7 @@ ul {
         flex-direction: row;
     }
     
-    .accomodations__main {
+    .section--housing-main {
         width: 60%;
     }
     
